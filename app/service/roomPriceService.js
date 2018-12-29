@@ -39,6 +39,7 @@ class RoomPriceService extends Service {
           communityPrice: communityPrice
         }
 
+
         areaObj.community.push(communityObj);
       })
       if (totalCommunity != 0) {
@@ -67,7 +68,7 @@ class RoomPriceService extends Service {
     const date = dayjs().format('YYYY-MM-DD');
     const path = `./data/${date}.json`
     fs.writeFileSync(path, dataStr);
-    return 'success'
+    return data
   }
 }
 
